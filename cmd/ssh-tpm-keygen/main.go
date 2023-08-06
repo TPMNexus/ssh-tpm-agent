@@ -152,7 +152,7 @@ func main() {
 		log.Fatal(err)
 	}
 	pubkeyFilename := filename + ".pub"
-	if err := os.WriteFile(pubkeyFilename, ssh.MarshalAuthorizedKey(sshKey), 0644); err != nil {
+	if err := os.WriteFile(pubkeyFilename, ssh.MarshalAuthorizedKey(sshKey), 0600); err != nil {
 		log.Fatal(err)
 	}
 
